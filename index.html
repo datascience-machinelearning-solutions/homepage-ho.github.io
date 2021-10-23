@@ -35,6 +35,7 @@ fjs.parentNode.insertBefore(js, fjs);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script>
@@ -76,41 +77,53 @@ function checkCookie() {
 
 
   <style>
+	  
+	  /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+	  
+	  
   .fakeimg {
     height: 200px;
     background: #aaa;
   }
 
-.social {
-	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
-	left: 0; /* Establecemos la barra en la izquierda */
-	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
-	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
-}
-
-	.social ul {
-		list-style: none;
-	}
-
-	.social ul li a {
-		display: inline-block;
-		color:#fff;
-		background: #000;
-		padding: 10px 15px;
-		text-decoration: none;
-		-webkit-transition:all 500ms ease;
-		-o-transition:all 500ms ease;
-		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
-	}
-
-	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
-	.social ul li .icon-twitter {background: #00abf0;}
-	.social ul li .icon-linkedin {background: "navy";}
-	
-		.social ul li a:hover {
-		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
-		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
-	}
 #hours{
   color: black;
   font-size: 16px;
@@ -253,15 +266,18 @@ style="width: 210px;border: none;height: 325px; display: inline;"
 src="https://checkout.baccredomatic.com/payment_button?token=MDQ3MjIxNzg1MzM1ODc1NTYxOWUuMTYxNjMzMTg2NTc3&color=%23ffffff&background=%23e4002b&text=Pagar ahora&hasimage=true">
 <p>Your browser does not support iframes.</p> 
 </iframe></center>
+		
 
-		<div class="social">
-		<ul>
-			<li><a href="https://www.facebook.com/DataScienceMachineLearning.Honduras" target="_blank" class="fab fa-facebook"></a></li>
-			
-			<li><a href="https://www.linkedin.com/in/datascience-machine-learning-solutions-honduras-83a3aa223/" class="fab fa-linkedin"></a></li>
-			
-		</ul>
-	</div>
+		<!-- The social media icon bar -->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/DataScienceMachineLearning.Honduras" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="https://twitter.com/solutions_ml" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.linkedin.com/in/datascience-machine-learning-solutions-honduras-83a3aa223/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  
+  
+</div>
+
+		
 				
  <!-- Your share button code -->
 <div class="fb-share-button" 
